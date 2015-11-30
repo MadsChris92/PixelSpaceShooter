@@ -18,8 +18,13 @@ public class UIControls : MonoBehaviour {
 	
 	}
 
-    public void loadScene()
+    public void loadOverviewScene()
     {
         Application.LoadLevel("Overview");
+    }
+
+    public void loadLevel1()
+    {
+        Application.LoadLevel("Scene1");
     }
 }
