@@ -6,6 +6,11 @@ public class PlayerControl : MonoBehaviour {
     private float rotationHorizontal = 0f, moveHorizontal, moveVertical;
     public float movementSpeed = 0, rotationSpeed = 0;
     Animator anim;
+    public float fireRate = 1;
+    float counter;
+    int alt = 0;
+    public Transform[] bulletSpawn;
+    public GameObject bullet;
 
     void Start () {
         anim = GetComponentInChildren<Animator>();
@@ -14,6 +19,25 @@ public class PlayerControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        counter += Time.deltaTime;
+     if(counter > fireRate && alt == 1)
+        {
+            Debug.Log("test");
+            GameObject clone = Instantiate(bullet, bulletSpawn[alt].transform.position, Quaternion.identity) as GameObject;
+            clone.GetComponent<Rigidbody>().AddForce(Vector3.up * 700);
+            counter = 0;
+            alt--;
+        }
+        if (counter > fireRate && alt == 0)
+        {
+            Debug.Log("test");
+            GameObject clone = Instantiate(bullet, bulletSpawn[alt].transform.position, Quaternion.identity) as GameObject;
+            clone.GetComponent<Rigidbody>().AddForce(Vector3.up * 700);
+            counter = 0;
+            alt++;
+        }
+
+
         keyboardControl();
         rotationManager();
     }

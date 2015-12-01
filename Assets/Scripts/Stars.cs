@@ -15,7 +15,6 @@ public class Stars : MonoBehaviour {
 	void Update () {
         count += Time.deltaTime;
         count2 += Time.deltaTime;
-        Debug.Log(count);
        
         if (count > 0.2f)
         {
