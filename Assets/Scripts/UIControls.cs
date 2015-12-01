@@ -6,6 +6,7 @@ public class UIControls : MonoBehaviour {
 
     //Text status;
     public Text status, kalorier;
+    public static int controlls;
 
 	// Use this for initialization
 	void Start () {
@@ -26,5 +27,13 @@ public class UIControls : MonoBehaviour {
     public void loadLevel1()
     {
         Application.LoadLevel("Scene1");
+    }
+    public void setKeyboard()
+    {
+        controlls = 0;
+    }
+    public void setAndroid()
+    {
+        controlls = 1;
     }
 }
