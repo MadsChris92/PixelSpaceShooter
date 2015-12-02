@@ -5,6 +5,7 @@ public class PlayerControl : MonoBehaviour {
 
     private float rotationHorizontal = 0f, moveHorizontal, moveVertical;
     public float movementSpeed = 0, rotationSpeed = 0;
+    public Dragging drag;
     Animator anim;
     public float fireRate = 1;
     float counter;
@@ -21,21 +22,30 @@ public class PlayerControl : MonoBehaviour {
     { 
         fire();
         rotationManager();
+        /*
         if(Application.platform == RuntimePlatform.Android)
         {
-            appControl();
+            
         }
         else
         {
             keyboardControl();
         }
-
+        */
+        
+        appControl();
+      
     }
 
     void appControl()
     {
-        Vector3 curPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10));
-        transform.position = curPosition;;
+        if (drag.clicked)
+        {
+            Vector3 curPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10));
+//            transform.position = curPosition;
+            transform.position = transform.position - drag.transform.position + curPosition;
+        }
+        
     }
 
     void rotationManager()
