@@ -14,7 +14,7 @@ public class DragMenu : MonoBehaviour {
 	void Start () {
         hiddenPosition = new Vector3(transform.position.x, transform.position.y);
         shownPosition = hiddenPosition + new Vector3(panel.rect.width, 0.0f);
-	}
+    }
 
     // Update is called once per frame
     void Update() {
