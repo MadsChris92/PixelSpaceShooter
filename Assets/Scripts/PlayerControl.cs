@@ -18,28 +18,24 @@ public class PlayerControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update ()
-    {
-        counter += Time.deltaTime;
-     if(counter > fireRate && alt == 1)
-        {
-            Debug.Log("test");
-            GameObject clone = Instantiate(bullet, bulletSpawn[alt].transform.position, Quaternion.identity) as GameObject;
-            clone.GetComponent<Rigidbody>().AddForce(Vector3.up * 700);
-            counter = 0;
-            alt--;
-        }
-        if (counter > fireRate && alt == 0)
-        {
-            Debug.Log("test");
-            GameObject clone = Instantiate(bullet, bulletSpawn[alt].transform.position, Quaternion.identity) as GameObject;
-            clone.GetComponent<Rigidbody>().AddForce(Vector3.up * 700);
-            counter = 0;
-            alt++;
-        }
-
-
-        keyboardControl();
+    { 
+        fire();
         rotationManager();
+        if(Application.platform == RuntimePlatform.Android)
+        {
+            appControl();
+        }
+        else
+        {
+            keyboardControl();
+        }
+
+    }
+
+    void appControl()
+    {
+        Vector3 curPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10));
+        transform.position = curPosition;;
     }
 
     void rotationManager()
@@ -74,6 +70,25 @@ public class PlayerControl : MonoBehaviour {
         else
         {
             anim.SetBool("Boost", false);
+        }
+    }
+
+    void fire()
+    {
+        counter += Time.deltaTime;
+        if (counter > fireRate && alt == 1)
+        {
+            GameObject clone = Instantiate(bullet, bulletSpawn[alt].transform.position, Quaternion.identity) as GameObject;
+            clone.GetComponent<Rigidbody>().AddForce(Vector3.up * 700);
+            counter = 0;
+            alt--;
+        }
+        if (counter > fireRate && alt == 0)
+        {
+            GameObject clone = Instantiate(bullet, bulletSpawn[alt].transform.position, Quaternion.identity) as GameObject;
+            clone.GetComponent<Rigidbody>().AddForce(Vector3.up * 700);
+            counter = 0;
+            alt++;
         }
     }
 }
