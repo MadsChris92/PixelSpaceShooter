@@ -5,6 +5,7 @@ public class PlayerControl : MonoBehaviour {
 
     private float rotationHorizontal = 0f, moveHorizontal, moveVertical;
     public float movementSpeed = 0, rotationSpeed = 0;
+    public Dragging drag;
     Animator anim;
     public float fireRate = 1;
     float counter;
@@ -18,28 +19,33 @@ public class PlayerControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update ()
-    {
-        counter += Time.deltaTime;
-     if(counter > fireRate && alt == 1)
-        {
-            Debug.Log("test");
-            GameObject clone = Instantiate(bullet, bulletSpawn[alt].transform.position, Quaternion.identity) as GameObject;
-            clone.GetComponent<Rigidbody>().AddForce(Vector3.up * 700);
-            counter = 0;
-            alt--;
-        }
-        if (counter > fireRate && alt == 0)
-        {
-            Debug.Log("test");
-            GameObject clone = Instantiate(bullet, bulletSpawn[alt].transform.position, Quaternion.identity) as GameObject;
-            clone.GetComponent<Rigidbody>().AddForce(Vector3.up * 700);
-            counter = 0;
-            alt++;
-        }
-
-
-        keyboardControl();
+    { 
+        fire();
         rotationManager();
+        /*
+        if(Application.platform == RuntimePlatform.Android)
+        {
+            
+        }
+        else
+        {
+            keyboardControl();
+        }
+        */
+        
+        appControl();
+      
+    }
+
+    void appControl()
+    {
+        if (drag.clicked)
+        {
+            Vector3 curPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10));
+//            transform.position = curPosition;
+            transform.position = transform.position - drag.transform.position + curPosition;
+        }
+        
     }
 
     void rotationManager()
@@ -74,6 +80,25 @@ public class PlayerControl : MonoBehaviour {
         else
         {
             anim.SetBool("Boost", false);
+        }
+    }
+
+    void fire()
+    {
+        counter += Time.deltaTime;
+        if (counter > fireRate && alt == 1)
+        {
+            GameObject clone = Instantiate(bullet, bulletSpawn[alt].transform.position, Quaternion.identity) as GameObject;
+            clone.GetComponent<Rigidbody>().AddForce(Vector3.up * 700);
+            counter = 0;
+            alt--;
+        }
+        if (counter > fireRate && alt == 0)
+        {
+            GameObject clone = Instantiate(bullet, bulletSpawn[alt].transform.position, Quaternion.identity) as GameObject;
+            clone.GetComponent<Rigidbody>().AddForce(Vector3.up * 700);
+            counter = 0;
+            alt++;
         }
     }
 }

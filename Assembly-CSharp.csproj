@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\DragMenu.cs" />
+     <Compile Include="Assets\Scripts\Dragging.cs" />
      <Compile Include="Assets\Scripts\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\StarPhysics.cs" />
      <Compile Include="Assets\Scripts\Stars.cs" />
