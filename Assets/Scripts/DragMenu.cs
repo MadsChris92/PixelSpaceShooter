@@ -13,7 +13,7 @@ public class DragMenu : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         hiddenPosition = new Vector3(transform.position.x, transform.position.y);
-        shownPosition = hiddenPosition + new Vector3(panel.rect.width, 0.0f);
+        shownPosition = hiddenPosition + new Vector3(panel.rect.width*2, 0.0f);
     }
 
     // Update is called once per frame
@@ -51,5 +51,13 @@ public class DragMenu : MonoBehaviour {
 
     void toggleHidden() {
         hidden = !hidden;
+    }
+
+    public void loadStatusScene() {
+        Application.LoadLevel("StatusScreen");
+    }
+
+    public void loadLevel1() {
+        Application.LoadLevel("Scene1");
     }
 }
