@@ -7,12 +7,7 @@ public class PlayerControl : MonoBehaviour {
     public float movementSpeed = 0, rotationSpeed = 0;
     public Dragging drag;
     Animator anim;
-    public float fireRate = 1;
-    float counter;
-    int alt = 0;
-    public Transform[] bulletSpawn;
     public Weapon[] weapons;
-    public GameObject bullet;
 
     void Start () {
         anim = GetComponentInChildren<Animator>();
@@ -83,25 +78,6 @@ public class PlayerControl : MonoBehaviour {
         else
         {
             anim.SetBool("Boost", false);
-        }
-    }
-
-    void fire()
-    {
-        counter += Time.deltaTime;
-        if (counter > fireRate && alt == 1)
-        {
-            GameObject clone = Instantiate(bullet, bulletSpawn[alt].transform.position, Quaternion.identity) as GameObject;
-            clone.GetComponent<Rigidbody>().AddForce(Vector3.up * 700);
-            counter = 0;
-            alt--;
-        }
-        if (counter > fireRate && alt == 0)
-        {
-            GameObject clone = Instantiate(bullet, bulletSpawn[alt].transform.position, Quaternion.identity) as GameObject;
-            clone.GetComponent<Rigidbody>().AddForce(Vector3.up * 700);
-            counter = 0;
-            alt++;
         }
     }
 }

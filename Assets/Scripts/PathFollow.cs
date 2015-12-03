@@ -25,7 +25,7 @@ public class PathFollow : MonoBehaviour {
             } else {
                 //transform.position = Vector3.MoveTowards(transform.position, path.points[currentPoint].position, speed);
                 body.velocity = Vector3.Lerp(body.velocity, (path.points[currentPoint].position - transform.position).normalized * speed, inertia);
-                transform.up = body.velocity.normalized;
+                if(faceForward) transform.up = body.velocity.normalized;
             }
         } else {
             if (path.loops) currentPoint = 0;

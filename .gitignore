@@ -57,7 +57,7 @@ Temporary Items
 *.userprefs
 *.pidb
 *.booproj
-*.vs
+/*.vs/
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -65,5 +65,3 @@ Temporary Items
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
 *.dwlt
-PixelSpaceShooter.sln
-PixelSpaceShooter.sln

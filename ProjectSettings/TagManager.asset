@@ -40,15 +40,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
-  - name: Icon
-    uniqueID: 3190679037
-    locked: 0
   - name: Stars
     uniqueID: 3161459295
     locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
   - name: Player
     uniqueID: 3899240113
+    locked: 0
+  - name: Icon
+    uniqueID: 3190679037
     locked: 0
