@@ -15,17 +15,18 @@ public class Spawner : MonoBehaviour {
 	void Update () {
         time += Time.deltaTime;
         count += Time.deltaTime;
-        Debug.Log(time);
-        if (time < 5 && count > 0.5)
-        {
-            spawnEnemy(0, 0);
-            count = 0;
-        }
+
+        spawnEnemy(0, 0, 0, 5, 0.5f);
 	}
 
-    void spawnEnemy(int enem, int pat)
+    void spawnEnemy(int enem, int pat, int minTim, int maxTim, float rate)
     {
-        GameObject clone = Instantiate(enemies[enem], paths[pat].transform.position, Quaternion.identity) as GameObject;
-        clone.GetComponent<PathFollow>().path = paths[pat];
+        if (time > minTim && time < maxTim  && count > rate)
+        {
+            GameObject clone = Instantiate(enemies[enem], paths[pat].transform.position, Quaternion.identity) as GameObject;
+            clone.GetComponent<PathFollow>().path = paths[pat];
+            count = 0;
+        }
+        
     }
 }
