@@ -2,38 +2,58 @@
 using System.Collections;
 
 public class Stars : MonoBehaviour {
-    public Transform[] starSpawm;
-    int randomPos, randomSpeed;
-    float count = 0, count2 = 0;
-    public GameObject star;
-    // Use this for initialization
+    bool instBG = true;
+    bool move = false;
+    public GameObject starBG;
+    GameObject clone1, clone2, clone3, clone4;
     void Start () {
         
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        count += Time.deltaTime;
-        count2 += Time.deltaTime;
-       
-        if (count > 0.2f)
+
+        if(instBG == true)
         {
-            randomSpeed = Random.Range(1, 100);
-            randomPos = Random.Range(0, 14);
-            GameObject clone = Instantiate(star, starSpawm[randomPos].transform.position, Quaternion.identity) as GameObject;
-            clone.GetComponent<Rigidbody>().AddForce(Vector3.down * 10 * randomSpeed);
-            count = 0;
+            clone1 = Instantiate(starBG, transform.position, Quaternion.identity) as GameObject;
+            clone2 = Instantiate(starBG, transform.position, Quaternion.identity) as GameObject;
+            clone3 = Instantiate(starBG, transform.position, Quaternion.identity) as GameObject;
+            clone4 = Instantiate(starBG, transform.position, Quaternion.identity) as GameObject;
+
+
+            clone3.transform.Rotate(180, 0, 0);
+            clone4.transform.Rotate(180, 0, 0);
+            clone2.transform.position = new Vector3(0, -0.5f, 0);
+            clone3.transform.position = new Vector3(0, -0.5f, 0);
+            instBG = false;
         }
-        if(count2 > 0.4f)
+
+        clone1.transform.position -= new Vector3(0, Time.deltaTime, 0);
+        clone2.transform.position -= new Vector3(0, Time.deltaTime, 0);
+        clone3.transform.position -= new Vector3(0, Time.deltaTime/3, 0);
+        clone4.transform.position -= new Vector3(0, Time.deltaTime/3, 0);
+
+        if (clone1.transform.position.y < -2 && clone1.transform.position.y > -2.2)
         {
-            randomSpeed = Random.Range(1, 100);
-            randomPos = Random.Range(0, 14);
-            GameObject clone = Instantiate(star, starSpawm[randomPos].transform.position, Quaternion.identity) as GameObject;
-            clone.GetComponent<Rigidbody>().AddForce(Vector3.down * 10 * randomSpeed);
-            count2 = 0;
+            clone2.transform.position = new Vector3(0, transform.position.y + 5, 0);
         }
-            
-     
+
+        if(clone1.transform.position.y < -16)
+        {
+            clone1.transform.position = new Vector3(0, transform.position.y + 5, 0);
+        }
+
+
+
+        if (clone4.transform.position.y < -2 && clone4.transform.position.y > -2.2)
+        {
+            clone3.transform.position = new Vector3(0, transform.position.y + 5, 0);
+        }
+
+        if (clone4.transform.position.y < -16)
+        {
+            clone4.transform.position = new Vector3(0, transform.position.y+ 5, 0);
+        }
 
     }
 }
