@@ -1,9 +1,10 @@
 fileFormatVersion: 2
 guid: cf2038c24d914d5469d64d9c26b8a09b
-timeCreated: 1449137685
+timeCreated: 1449142944
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: New Piskel (1)_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -49,7 +50,17 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: New Piskel (1)_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 17
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

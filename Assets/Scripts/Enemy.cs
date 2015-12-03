@@ -3,8 +3,9 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour {
 
+    public GameObject explosion;
 
-    float health;
+    float health=4;
 	public enum enemyTypes {
         Weak, Middle, Strong,
     }
@@ -13,24 +14,29 @@ public class Enemy : MonoBehaviour {
 	void Start () {
         if (type == enemyTypes.Weak)
         {
-            health = 2;
+            health *= 0.5f;
         }
-	}
+        if (type == enemyTypes.Middle) {
+            health *= 1.0f;
+        }
+        if (type == enemyTypes.Strong) {
+            health *= 2.0f;
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
 
-    void OnCollisionEnter(Collision c)
-    {
-        if(c.transform.tag == "PlayerProjectile")
-        {
-            health -= c.gameObject.GetComponent<Projectile>().damage;
-            if(health == 0)
-            {
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.transform.tag == "PlayerProjectile") {
+            health -= other.gameObject.GetComponent<Projectile>().damage;
+            if (health <= 0) {
+                Instantiate(explosion, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
+            Destroy(other.gameObject);
         }
     }
 }
