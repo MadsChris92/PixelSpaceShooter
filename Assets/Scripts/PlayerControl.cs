@@ -11,6 +11,7 @@ public class PlayerControl : MonoBehaviour {
     float counter;
     int alt = 0;
     public Transform[] bulletSpawn;
+    public Weapon[] weapons;
     public GameObject bullet;
 
     void Start () {
@@ -19,8 +20,10 @@ public class PlayerControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update ()
-    { 
-        fire();
+    {
+        foreach (Weapon weapon in weapons) {
+            weapon.Fire();
+        }
         rotationManager();
         /*
         if(Application.platform == RuntimePlatform.Android)
