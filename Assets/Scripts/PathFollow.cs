@@ -21,7 +21,7 @@ public class PathFollow : MonoBehaviour {
             }
         } else {
             if (path.loops) currentPoint = 0;
-            else Destroy(gameObject);
+       else Destroy(gameObject);
         }
 	}
 }
