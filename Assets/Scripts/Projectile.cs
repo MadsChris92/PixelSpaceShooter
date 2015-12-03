@@ -5,6 +5,7 @@ public class Projectile : MonoBehaviour {
 
     public float shotSpeed = 2;
     public float lifeSpan = 1;
+    public float damage = 1;
 
 	// Use this for initialization
 	void Start () {

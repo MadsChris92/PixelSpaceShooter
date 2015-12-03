@@ -12,6 +12,7 @@ GameObject:
   - 95: {fileID: 9564610}
   - 54: {fileID: 5423900}
   - 65: {fileID: 6532288}
+  - 114: {fileID: 11490868}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: PlayerProjectile
@@ -75,6 +76,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11490868
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8ee892cc28acb942843b9ed423ac3a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotSpeed: 10
+  lifeSpan: 1
+  damage: 1
 --- !u!212 &21270536
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -111,6 +126,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_TagString
       value: PlayerProjectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shotSpeed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -4,7 +4,7 @@ using System.Collections;
 public class Enemy : MonoBehaviour {
 
 
-    int health;
+    float health;
 	public enum enemyTypes {
         Weak, Middle, Strong,
     }
@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour {
     {
         if(c.transform.tag == "PlayerProjectile")
         {
-            health--;
+            health -= c.gameObject.GetComponent<Projectile>().damage;
             if(health == 0)
             {
                 Destroy(gameObject);
