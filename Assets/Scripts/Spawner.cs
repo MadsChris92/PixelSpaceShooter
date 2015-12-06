@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour {
     {
         if (time > minTim && time < maxTim  && count > rate)
         {
-            GameObject clone = Instantiate(enemies[enem], paths[pat].transform.position, Quaternion.identity) as GameObject;
+            GameObject clone = Instantiate(enemies[enem], paths[pat].transform.position, new Quaternion(Quaternion.identity.x, Quaternion.identity.y, Quaternion.identity.z -180, 1)) as GameObject;
             clone.GetComponent<PathFollow>().path = paths[pat];
             count = 0;
         }

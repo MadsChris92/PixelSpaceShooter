@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .195999995, z: 0}
+  m_LocalPosition: {x: 0, y: .233400002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 494798}
@@ -81,8 +81,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 121112}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.41967416, y: -1.40688443, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: -1.62920685e-07}
+  m_LocalPosition: {x: -1.73462105, y: -1.92910254, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 436728}
@@ -129,10 +129,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 763abd3cc35d1ce4bb4c55a04cac70bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 0}
+  explosion: {fileID: 177066, guid: d9825480c2c43ab4da3e44d14061aa3c, type: 2}
   weapons:
   - {fileID: 11409192}
-  type: 2
+  type: 0
 --- !u!114 &11409192
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6556ad9b76b4f5849a0f6c3b2e0193d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 161636, guid: 129ccd06ca388e84f99d5edf2c3583ed, type: 2}
+  projectile: {fileID: 183520, guid: 30e5a9760d7f8c2459e92fb967892c55, type: 2}
   shotsPerSecond: 1
   bulletSpawns:
   - {fileID: 479498}
@@ -219,7 +219,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: projectile
       value: 
-      objectReference: {fileID: 161636, guid: 129ccd06ca388e84f99d5edf2c3583ed, type: 2}
+      objectReference: {fileID: 183520, guid: 30e5a9760d7f8c2459e92fb967892c55, type: 2}
     - target: {fileID: 0}
       propertyPath: shotsPerSecond
       value: 1
@@ -236,6 +236,22 @@ Prefab:
       propertyPath: weapons.Array.data[0]
       value: 
       objectReference: {fileID: 11409192}
+    - target: {fileID: 0}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalRotation.w
+      value: -1.62920685e-07
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 177066, guid: d9825480c2c43ab4da3e44d14061aa3c, type: 2}
+    - target: {fileID: 0}
+      propertyPath: type
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 121112}
