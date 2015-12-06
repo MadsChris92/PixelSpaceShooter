@@ -75,9 +75,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8ee892cc28acb942843b9ed423ac3a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotSpeed: 19.7999992
+  shotSpeed: 5
   lifeSpan: 1
-  damage: 1
+  damage: 0
+  bType: 0
 --- !u!212 &21233572
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -96,7 +97,9 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -121,7 +124,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: shotSpeed
-      value: 19.7999992
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_GravityScale
@@ -139,6 +142,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_TagString
       value: PlayerProjectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: damage
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

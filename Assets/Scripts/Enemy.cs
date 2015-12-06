@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour {
     public GameObject explosion;
 
     float health=4;
+    public Weapon[] weapons;
 	public enum enemyTypes {
         Weak, Middle, Strong,
     }
@@ -26,8 +27,12 @@ public class Enemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+        foreach (Weapon weapon in weapons)
+        {
+            weapon.Fire();
+        }
+
+    }
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.transform.tag == "PlayerProjectile") {

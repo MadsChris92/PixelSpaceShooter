@@ -6,8 +6,10 @@ public class PlayerControl : MonoBehaviour {
     private float rotationHorizontal = 0f, moveHorizontal, moveVertical;
     public float movementSpeed = 0, rotationSpeed = 0;
     public Dragging drag;
+    public Weapon weapon;
     Animator anim;
     public Weapon[] weapons;
+    public GameObject dragCircle;
 
     void Start () {
         anim = GetComponentInChildren<Animator>();
@@ -20,19 +22,22 @@ public class PlayerControl : MonoBehaviour {
             weapon.Fire();
         }
         rotationManager();
-        /*
+        
+
+
         if(Application.platform == RuntimePlatform.Android)
         {
-            
+            appControl();
         }
         else
         {
             keyboardControl();
+            dragCircle.GetComponent<SpriteRenderer>().enabled = false;
         }
-        */
         
-        appControl();
-      
+
+
+
     }
 
     void appControl()
