@@ -39,8 +39,8 @@ public class Weapon : MonoBehaviour {
             }
             else if(fireType == FireType.Barrel)
             {
-                barrel.transform.rotation(player.transform.position);
-//                barrel.transform.LookAt(player.transform.position);
+//                barrel.transform.rotation(player.transform.position);
+                barrel.transform.up = (barrel.transform.position - player.transform.position).normalized;
                 GameObject clone = Instantiate(projectile, bulletSpawns[0].position, bulletSpawns[0].rotation) as GameObject;
                 clone.GetComponent<Rigidbody2D>().AddForce(transform.forward * 1000);
             }
