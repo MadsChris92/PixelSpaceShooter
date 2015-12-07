@@ -34,14 +34,13 @@ public class Enemy : MonoBehaviour {
 
     }
 
-    void OnTriggerEnter2D(Collider2D other) {
-        if (other.transform.tag == "PlayerProjectile") {
-            health -= other.gameObject.GetComponent<Projectile>().damage;
-            if (health <= 0) {
-                Instantiate(explosion, transform.position, Quaternion.identity);
-                Destroy(gameObject);
-            }
-            Destroy(other.gameObject);
+    
+
+    public void TakeDamage(float damage) {
+        health -= damage;
+        if (health <= 0) {
+            Instantiate(explosion, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
     }
 }

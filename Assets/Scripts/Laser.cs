@@ -5,10 +5,11 @@ public class Laser : MonoBehaviour {
 
     public float lifeSpan = 1;
     public float damagePerSecond = 1;
-    public enum team {
+    float damage;
+    public enum Team {
         player, enemy, fuckTheWorld
     }
-    public team bType;
+    public Team team;
     public float range = 5.0f;
     public GameObject start, mid, end;
     GameObject target;
@@ -19,7 +20,7 @@ public class Laser : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        damagePerSecond *= Time.deltaTime;
+        damage = damagePerSecond * Time.deltaTime;
         animator = GetComponent<Animator>();
         startTime = Time.time;
     }
@@ -35,6 +36,8 @@ public class Laser : MonoBehaviour {
             length = raycast.distance;
             length = Mathf.Max(length, 0.31f);
             target = raycast.collider.gameObject;
+            if(team == Team.player)
+                target.GetComponent<Enemy>().TakeDamage(damage);
         }
 
         end.transform.localPosition = new Vector2(0, length);

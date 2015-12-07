@@ -6,6 +6,7 @@ public class Weapon : MonoBehaviour {
     public GameObject projectile, barrel;
     GameObject player;
     public float shotsPerSecond;
+    public bool isLaser = false;
     public Transform[] bulletSpawns;
     AudioSource audioSource;
     float fireDelay = 0;
@@ -30,22 +31,25 @@ public class Weapon : MonoBehaviour {
             }
             if (shotsPerSecond > 0)
                 fireDelay = 1 / shotsPerSecond;
+
             if (fireType == FireType.All) {
                 foreach (Transform spawn in bulletSpawns) {
-                    Instantiate(projectile, spawn.position, spawn.rotation);
+                    GameObject clone = (GameObject) Instantiate(projectile, spawn.position, spawn.rotation);
+                    if (isLaser) clone.transform.SetParent(transform);
                 }
-            } else if(fireType == FireType.Alternate) {
-                Instantiate(projectile, bulletSpawns[fireAlt].position, bulletSpawns[fireAlt].rotation);
+            }
+            else if(fireType == FireType.Alternate) {
+                GameObject clone = (GameObject) Instantiate(projectile, bulletSpawns[fireAlt].position, bulletSpawns[fireAlt].rotation);
+                if (isLaser) clone.transform.SetParent(transform);
                 fireAlt = (fireAlt + 1) % bulletSpawns.Length;
             }
-            else if(fireType == FireType.Barrel)
-            {
+            else if(fireType == FireType.Barrel) {
 //                barrel.transform.rotation(player.transform.position);
                 barrel.transform.up = (barrel.transform.position - player.transform.position).normalized;
                 GameObject clone = Instantiate(projectile, bulletSpawns[0].position, bulletSpawns[0].rotation) as GameObject;
                 clone.GetComponent<Rigidbody2D>().AddForce(transform.forward * 1000);
+                if (isLaser) clone.transform.SetParent(transform);
             }
-
         }
     }
 	

@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 157348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.01999998, y: .409999996, z: 1.17999995}
-  m_LocalScale: {x: 3, y: 5, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -55,7 +55,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 157348}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -74,6 +74,7 @@ MonoBehaviour:
   shotSpeed: 10
   lifeSpan: 1
   damage: .5
+  hitSpark: {fileID: 169516, guid: 4fad4b5194fe7454e8f01140f5c04890, type: 2}
   bType: 1
 --- !u!212 &21227202
 SpriteRenderer:
@@ -158,12 +159,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalScale.y
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: bType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: hitSpark
+      value: 
+      objectReference: {fileID: 169516, guid: 4fad4b5194fe7454e8f01140f5c04890, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 157348}
