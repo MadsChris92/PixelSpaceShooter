@@ -28,6 +28,7 @@ GameObject:
   - 212: {fileID: 21202712}
   - 114: {fileID: 11418334}
   - 50: {fileID: 5035168}
+  - 114: {fileID: 11472770}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -74,7 +75,7 @@ Rigidbody2D:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &11418334
 MonoBehaviour:
@@ -87,11 +88,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8ee892cc28acb942843b9ed423ac3a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotSpeed: 6
+  shotSpeed: 8
   lifeSpan: 4
   damage: 5
   hitSpark: {fileID: 0}
+  mods:
+  - {fileID: 11472770}
   bType: 1
+--- !u!114 &11472770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 148096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e09f87b59462e6f45b5e5dc8ccd09cbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackForce: .0500000007
+  trackRange: 5
 --- !u!198 &19831842
 ParticleSystem:
   m_ObjectHideFlags: 1

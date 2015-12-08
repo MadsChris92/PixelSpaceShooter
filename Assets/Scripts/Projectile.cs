@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class Projectile : MonoBehaviour {
 
@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour {
     public float lifeSpan = 1;
     public float damage = 1;
     public GameObject hitSpark;
+    public List<Mod> mods;
     public enum bulletType{
         enemyBullet, playerBullet
     }
@@ -24,6 +25,13 @@ public class Projectile : MonoBehaviour {
         }
 
 
+    }
+
+    void Update() {
+        transform.up = GetComponent<Rigidbody2D>().velocity.normalized;
+        foreach (Mod mod in mods) {
+            mod.OnUpdate();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other) {
