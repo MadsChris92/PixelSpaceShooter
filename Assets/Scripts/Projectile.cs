@@ -15,16 +15,7 @@ public class Projectile : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         Destroy(gameObject, lifeSpan);
-        if(bType == bulletType.playerBullet)
-        {
-            GetComponent<Rigidbody2D>().velocity = transform.up * shotSpeed;
-        }
-        if (bType == bulletType.enemyBullet)
-        {
-            GetComponent<Rigidbody2D>().velocity = Vector2.down * shotSpeed;
-        }
-
-
+        GetComponent<Rigidbody2D>().velocity = transform.up * shotSpeed;
     }
 
     void Update() {

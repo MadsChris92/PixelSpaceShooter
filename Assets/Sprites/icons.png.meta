@@ -1,18 +1,18 @@
 fileFormatVersion: 2
 guid: 2df6e31f64757f2428138c742557af2d
-timeCreated: 1449057359
+timeCreated: 1449578406
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: New Piskel(1)_0
-    21300002: New Piskel(1)_1
-    21300004: New Piskel(1)_2
-    21300006: New Piskel(1)_3
-    21300008: New Piskel(1)_4
+    21300000: button
+    21300002: iconHome
+    21300004: iconCashMoney
+    21300006: iconPlay
+    21300008: iconSettings
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -35,7 +35,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: 1
-    aniso: 16
+    aniso: 1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -55,7 +55,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: New Piskel(1)_0
+    - name: button
       rect:
         serializedVersion: 2
         x: 0
@@ -65,7 +65,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 6, y: 6, z: 6, w: 6}
-    - name: New Piskel(1)_1
+    - name: iconHome
       rect:
         serializedVersion: 2
         x: 32
@@ -73,9 +73,9 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: New Piskel(1)_2
+    - name: iconCashMoney
       rect:
         serializedVersion: 2
         x: 64
@@ -83,9 +83,9 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: New Piskel(1)_3
+    - name: iconPlay
       rect:
         serializedVersion: 2
         x: 96
@@ -93,9 +93,9 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: New Piskel(1)_4
+    - name: iconSettings
       rect:
         serializedVersion: 2
         x: 128
@@ -103,7 +103,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

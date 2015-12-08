@@ -124,9 +124,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 5072828, guid: 650e6df4d80165e4795230eb895442d3, type: 2}
-      propertyPath: m_Constraints
-      value: 0
+    - target: {fileID: 11443696, guid: 650e6df4d80165e4795230eb895442d3, type: 2}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 118054, guid: 6701f4669b421a5419add42b381f06aa, type: 2}
+    - target: {fileID: 11443696, guid: 650e6df4d80165e4795230eb895442d3, type: 2}
+      propertyPath: isLaser
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 650e6df4d80165e4795230eb895442d3, type: 2}
@@ -260,10 +264,34 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 155870, guid: ec7d9fcdfd4d63949829c8a5c00402e4, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 177910, guid: ec7d9fcdfd4d63949829c8a5c00402e4, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 172066, guid: ec7d9fcdfd4d63949829c8a5c00402e4, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 166568, guid: ec7d9fcdfd4d63949829c8a5c00402e4, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 102100, guid: ec7d9fcdfd4d63949829c8a5c00402e4, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 173874, guid: ec7d9fcdfd4d63949829c8a5c00402e4, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec7d9fcdfd4d63949829c8a5c00402e4, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &991328901
+--- !u!1001 &1417117209
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2

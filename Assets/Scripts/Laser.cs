@@ -27,7 +27,14 @@ public class Laser : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        RaycastHit2D raycast = Physics2D.Raycast(transform.position, transform.up, range);
+        RaycastHit2D raycast;
+        if (team == Team.player) {
+            raycast = Physics2D.Raycast(transform.position, transform.up, range, LayerMask.GetMask("Enemy"));
+        } else if (team == Team.enemy) {
+            raycast = Physics2D.Raycast(transform.position, transform.up, range, LayerMask.GetMask("Player"));
+        } else {
+            raycast = Physics2D.Raycast(transform.position, transform.up, range);
+        }
         float length;
         if(raycast.collider == null) {
             length = range;

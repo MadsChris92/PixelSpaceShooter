@@ -44,11 +44,8 @@ public class Weapon : MonoBehaviour {
                 fireAlt = (fireAlt + 1) % bulletSpawns.Length;
             }
             else if(fireType == FireType.Barrel) {
-//                barrel.transform.rotation(player.transform.position);
-                barrel.transform.up = (barrel.transform.position - player.transform.position).normalized;
-                GameObject clone = Instantiate(projectile, bulletSpawns[0].position, bulletSpawns[0].rotation) as GameObject;
-                clone.GetComponent<Rigidbody2D>().AddForce(transform.forward * 1000);
-                if (isLaser) clone.transform.SetParent(transform);
+                GameObject clone = Instantiate(projectile, bulletSpawns[0].position, barrel.transform.rotation) as GameObject;
+                if (isLaser) clone.transform.SetParent(barrel.transform);
             }
         }
     }
@@ -61,7 +58,8 @@ public class Weapon : MonoBehaviour {
             Vector3 targetDir = player.transform.position - barrel.transform.position;
             Vector3 newDir = Vector3.RotateTowards(barrel.transform.position, targetDir, 5, 0.0F);
             Debug.DrawRay(transform.position, newDir, Color.red);
-            barrel.transform.rotation = Quaternion.LookRotation(newDir);
+            //barrel.transform.rotation = Quaternion.LookRotation(newDir);
+            barrel.transform.up = newDir;
 
         }
         

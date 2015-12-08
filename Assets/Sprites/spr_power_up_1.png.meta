@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 47bc827a2b846174da3401ca854dd78c
-timeCreated: 1449567410
+guid: ad83ee52aa53afe48838b7b53226bca1
+timeCreated: 1449578292
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: New Piskel 1_0
-    21300002: New Piskel 1_1
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -31,8 +29,8 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: 0
-    aniso: 16
+    filterMode: -1
+    aniso: -1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -40,7 +38,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -51,27 +49,7 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: New Piskel 1_0
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 18
-        width: 5
-        height: 11
-      alignment: 7
-      pivot: {x: .5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: New Piskel 1_1
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 7
-        width: 14
-        height: 12
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+    sprites: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

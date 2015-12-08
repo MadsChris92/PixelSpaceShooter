@@ -4,17 +4,11 @@ using System.Collections;
 public class DragMenu : MonoBehaviour {
 
     public RectTransform panel;
-    Vector3 hiddenPosition, shownPosition;
+    public Transform hiddenTransform, shownTransform;
     Vector3 dragOffset;
     bool hidden = true;
     bool dragging = false;
     float dragDuration;
-
-	// Use this for initialization
-	void Start () {
-        hiddenPosition = new Vector3(transform.position.x, transform.position.y);
-        shownPosition = hiddenPosition + new Vector3(panel.rect.width*2, 0.0f);
-    }
 
     // Update is called once per frame
     void Update() {
@@ -22,9 +16,9 @@ public class DragMenu : MonoBehaviour {
             transform.position = new Vector3((Input.mousePosition+dragOffset).x, transform.position.y);
         } else {
             if (hidden) {
-                transform.position = (hiddenPosition + transform.position) / 2;
+                transform.position = (hiddenTransform.position + transform.position) / 2;
             } else {
-                transform.position = (shownPosition + transform.position) / 2;
+                transform.position = (shownTransform.position + transform.position) / 2;
             }
         }
 	}
@@ -40,7 +34,7 @@ public class DragMenu : MonoBehaviour {
         if(dragDuration < 0.2f) {
             toggleHidden();
         } else {
-            if (transform.position.x - hiddenPosition.x > (shownPosition.x - hiddenPosition.x) / 2) {
+            if (transform.position.x - hiddenTransform.position.x > (shownTransform.position.x - hiddenTransform.position.x) / 2) {
                 hidden = false;
             } else {
                 hidden = true;
@@ -55,6 +49,10 @@ public class DragMenu : MonoBehaviour {
 
     public void loadStatusScene() {
         Application.LoadLevel("StatusScreen");
+    }
+
+    public void loadShopScene() {
+        Application.LoadLevel("ShopScreen");
     }
 
     public void loadLevel1() {
