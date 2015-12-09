@@ -222,6 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Powerthirst
   itemDesc: For people who need gratuitous amounts of energy!
+  itemIcon: {fileID: 0}
 --- !u!1 &237228606
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,6 +721,58 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 22445396, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22445396, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22413104, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22413104, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22475332, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22475332, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22475332, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 22475332, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 22479510, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22479510, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 22450296, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22450296, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490578, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.52587891e-05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
   m_IsPrefabParent: 0
@@ -935,7 +988,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2057194139}
   m_Direction: 2
   m_Value: 0
-  m_Size: .999999821
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

@@ -10,8 +10,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Overview.unity
   - enabled: 1
+    path: Assets/AccTestScaene.unity
+  - enabled: 0
     path: Assets/StatusScreen.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene1.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/ShopScreen.unity
