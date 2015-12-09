@@ -5,14 +5,17 @@ using System.Collections;
 public class UIControls : MonoBehaviour {
 
     //Text status;
-    public Text status, kalorier;
+    public Text pointScore, calorieScore, distanceScore;
+    public int calories = 862, kilometers = 13;
+    public int points = 13*5;
     public static int controlls;
 
 	// Use this for initialization
 	void Start () {
-        status.text = "Du har optjent 100 point";
-        kalorier.text = "Du har forbrændt 250 kcal";
-	}
+        pointScore.text = "You've earned "+points+(points>1?" points":" point");
+        calorieScore.text = /*"You have burned "+*/calories+" kcal";
+        distanceScore.text = /*"You have travelled " + */kilometers + " km";
+    }
 	
 	// Update is called once per frame
 	void Update () {

@@ -4,27 +4,31 @@ using System.Collections;
 
 public class ItemPanelScript : MonoBehaviour {
 
-    public string itemName, itemDesc;
-    public Sprite itemIcon;
-    Text uiName, uiDesc;
-    Image uiImage;
+    Item item;
+    public Text uiTitle, uiDesc;
+    public Image uiImage;
 
 	// Use this for initialization
 	void Start () {
-        Text[] stuff = GetComponentsInChildren<Text>();
-        foreach (Text thing in stuff) {
+        foreach (Text thing in GetComponentsInChildren<Text>()) {
             if(thing.name == "ItemName") {
-                uiName = thing;
+                uiTitle = thing;
             } else if(thing.name == "ItemDesc") {
                 uiDesc = thing;
             }
         }
-        uiName.text = "your mom";
-        uiDesc.text = "She is a very nice lady";
+        foreach (Image thing in GetComponentsInChildren<Image>()) {
+            if (thing.name == "ItemImage") {
+                uiImage = thing;
+            }
+        }
+
     }
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public void SetItem(Item item) {
+        uiTitle.text = item.title;
+        uiDesc.text = item.description;
+        uiImage.sprite = item.icon;
+        this.item = item;
+    }
 }

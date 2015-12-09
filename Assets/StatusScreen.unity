@@ -129,7 +129,7 @@ GameObject:
   - 222: {fileID: 107717790}
   - 114: {fileID: 107717789}
   m_Layer: 5
-  m_Name: Kalorier
+  m_Name: Cal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,11 +146,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1487184720}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_AnchorMin: {x: 0, y: .5}
   m_AnchorMax: {x: 0, y: .5}
-  m_AnchoredPosition: {x: 180, y: -17.5}
-  m_SizeDelta: {x: 230, y: 25}
+  m_AnchoredPosition: {x: 110.599998, y: -17.5}
+  m_SizeDelta: {x: 91.0999985, y: 25}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &107717789
 MonoBehaviour:
@@ -203,7 +203,7 @@ GameObject:
   - 222: {fileID: 207878145}
   - 114: {fileID: 207878144}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ImagePoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -220,11 +220,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1487184720}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: .5}
   m_AnchorMax: {x: 0, y: .5}
   m_AnchoredPosition: {x: 42, y: 18.2000008}
-  m_SizeDelta: {x: 37, y: 35}
+  m_SizeDelta: {x: 45, y: 45}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &207878144
 MonoBehaviour:
@@ -439,7 +439,7 @@ GameObject:
   - 222: {fileID: 503663744}
   - 114: {fileID: 503663743}
   m_Layer: 5
-  m_Name: Panel (1)
+  m_Name: PanelGoals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -569,6 +569,73 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 515220749}
+--- !u!1 &621190359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 621190360}
+  - 222: {fileID: 621190362}
+  - 114: {fileID: 621190361}
+  m_Layer: 5
+  m_Name: ImageDistance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &621190360
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 621190359}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1487184720}
+  m_RootOrder: 5
+  m_AnchorMin: {x: 0, y: .5}
+  m_AnchorMax: {x: 0, y: .5}
+  m_AnchoredPosition: {x: 178.800003, y: -18.6000061}
+  m_SizeDelta: {x: 45, y: 45}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &621190361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 621190359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 2a8a903643a64094a8bcc1d4dec6c65d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &621190362
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 621190359}
 --- !u!1 &636208383
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,7 +816,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2063099273}
   m_Direction: 2
   m_Value: 1
-  m_Size: .693793237
+  m_Size: .695309997
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -912,6 +979,80 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca513742491af6d42b9201e770fd5c91, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &816747551
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 816747552}
+  - 222: {fileID: 816747554}
+  - 114: {fileID: 816747553}
+  m_Layer: 5
+  m_Name: Distance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &816747552
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 816747551}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1487184720}
+  m_RootOrder: 4
+  m_AnchorMin: {x: 0, y: .5}
+  m_AnchorMax: {x: 0, y: .5}
+  m_AnchoredPosition: {x: 247.399994, y: -17.500061}
+  m_SizeDelta: {x: 91.0999985, y: 25}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &816747553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 816747551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 18
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Point
+
+'
+--- !u!222 &816747554
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 816747551}
 --- !u!1 &884349653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,7 +1263,7 @@ GameObject:
   - 222: {fileID: 1007437421}
   - 114: {fileID: 1007437420}
   m_Layer: 5
-  m_Name: Point
+  m_Name: Points
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1475,55 +1616,55 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22445396, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22445396, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22413104, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22413104, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22475332, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
+      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22475332, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 22475332, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22475332, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22475332, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
       propertyPath: m_SizeDelta.y
-      value: -17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22479510, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22479510, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22450296, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22450296, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
       propertyPath: m_SizeDelta.y
-      value: -17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22490578, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -1.52587891e-05
+      value: 191
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13dbe5b9007ff5943a18f2f9c146f675, type: 2}
@@ -1611,7 +1752,7 @@ GameObject:
   - 222: {fileID: 1201142111}
   - 114: {fileID: 1201142110}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: PanelActivity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1895,7 +2036,7 @@ GameObject:
   - 222: {fileID: 1487184722}
   - 114: {fileID: 1487184721}
   m_Layer: 5
-  m_Name: Panel (2)
+  m_Name: PanelScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1912,9 +2053,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1007437418}
-  - {fileID: 107717788}
   - {fileID: 207878143}
+  - {fileID: 107717788}
   - {fileID: 1712078186}
+  - {fileID: 816747552}
+  - {fileID: 621190360}
   m_Father: {fileID: 1052086835}
   m_RootOrder: 4
   m_AnchorMin: {x: .625, y: .734866619}
@@ -1982,8 +2125,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a5ad93dd6a3a840b583e6ce3da3ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  status: {fileID: 1007437420}
-  kalorier: {fileID: 107717789}
+  pointScore: {fileID: 1007437420}
+  calorieScore: {fileID: 107717789}
+  distanceScore: {fileID: 816747553}
+  calories: 500
+  kilometers: 13
+  points: 1
 --- !u!4 &1559328824
 Transform:
   m_ObjectHideFlags: 0
@@ -2142,7 +2289,7 @@ GameObject:
   - 222: {fileID: 1712078188}
   - 114: {fileID: 1712078187}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: ImageCal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2163,7 +2310,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: .5}
   m_AnchorMax: {x: 0, y: .5}
   m_AnchoredPosition: {x: 42, y: -18.5999985}
-  m_SizeDelta: {x: 37, y: 35}
+  m_SizeDelta: {x: 45, y: 45}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1712078187
 MonoBehaviour:
@@ -2379,7 +2526,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 492993408}
   m_Direction: 2
   m_Value: 1
-  m_Size: .61175698
+  m_Size: .616146386
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

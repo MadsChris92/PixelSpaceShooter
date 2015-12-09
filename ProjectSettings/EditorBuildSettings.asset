@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/DragMenu.unity
   - enabled: 0
     path: Assets/Overview.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/AccTestScaene.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/StatusScreen.unity
-  - enabled: 0
-    path: Assets/Scene1.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/ShopScreen.unity
+  - enabled: 1
+    path: Assets/Scene1.unity
